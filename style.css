@@ -1,12 +1,30 @@
+:root{
+    --basic-red: #ed4042;
+    --darker-red: #A93226;
+    --skyn-color: #f6c99c;
+    --shadow-skyn-color: #F0B27A;
+    --basic-orange: #F39C12;
+    --dark-orange: #DC7633;
+    --soft-yellow: #ecc955;
+    --main-yellow: #F1C40F;
+    --basic-purple: #AF7AC5;
+    --basic-blue: #5DADE2;
+    --soft-cyan: #76D7C4;
+    --brown-color: #451b0d;
+}
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+html{
+    background-color: black;
+}
+/* First Draw */
 .first-draw{
     width: 100%;
     height: 100vh;
-    background-color: #ed4042;
+    background-color: var(--basic-red);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,7 +35,7 @@
     border-radius: 100px;
     position: relative;
     z-index: 2;
-    background-color: #f6c99c;
+    background-color: var(--skyn-color);
 }
 .ears{
     width: 80px;
@@ -27,8 +45,8 @@
     right: 35px;
     border-radius: 40px;
     z-index: 1;
-    color: #F0B27A;
-    background-color: #F0B27A;
+    color: var(--shadow-skyn-color);
+    background-color: var(--shadow-skyn-color);
     box-shadow: 
     195px 0 currentColor;
 }
@@ -39,8 +57,8 @@
     top: 5px;
     left: 20px;
     border-radius: 10px;
-    color: #DC7633;
-    background-color: #DC7633;
+    color: var(--dark-orange);
+    background-color: var(--dark-orange);
 }
 .cross-line{
     transform: rotate(45deg);
@@ -57,7 +75,7 @@
     top: 70px;
     z-index: 2;
     border-radius: 50% 50% 0 0;
-    background-color: #f6c99c;
+    background-color: var(--skyn-color);
 }
 .eyes .eyebrown{
     width: 120px;
@@ -65,7 +83,7 @@
     position: absolute;
     z-index: 1;
     right: calc(50% - 60px);
-    background-color: #f6c99c;
+    background-color: var(--skyn-color);
 }
 .eye-left, .eye-right{
     width: 60px;
@@ -107,7 +125,7 @@
     position: absolute;
     top: -20px;
     right: calc(50% - 30px);
-    background-color: #f6c99c;
+    background-color: var(--skyn-color);
 }
 .mouth{
     width: 110px;
@@ -116,7 +134,7 @@
     top: 45px;
     left: calc(50% - 55px);
     border-radius: 0 0 60px 60px;
-    background-color: #A93226;
+    background-color: var(--darker-red);
 }
 .teeth{
     width: 70px;
@@ -132,7 +150,7 @@
     left: 12px;
     bottom: 15px;
     border-radius: 0 20% 0 50%;
-    background-color: #E74C3C;
+    background-color: var(--basic-red);
 }
 .mouth-contorn{
     box-sizing: unset;
@@ -146,7 +164,7 @@
 .neck{
     width: 140px;
     height: 50px;
-    background-color: #F0B27A;
+    background-color: var(--shadow-skyn-color);
     position: absolute;
     bottom: -20px;
     left: calc(50% - 70px);
@@ -154,11 +172,11 @@
 }
 
 
-
+/* Second Draw */
 .second-draw{
     width: 100%;
     height: 100vh;
-    background-color: #F1C40F;
+    background-color: var(--main-yellow);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -170,32 +188,80 @@
     grid-template: repeat(3, 1fr) / repeat(2, 1fr);
 }
 .figma-logo .fig1{
-    background-color: #ed4042;
+    background-color: var(--basic-red);
     width: 100%;
     height: 100%;
     border-radius: 50% 0 0 50%;
 }
 .figma-logo .fig2{
-    background-color: #F39C12;
+    background-color: var(--basic-orange);
     width: 100%;
     height: 100%;
     border-radius: 0 50% 50% 0;
 }
 .figma-logo .fig3{
-    background-color: #AF7AC5;
+    background-color: var(--basic-purple);
     width: 100%;
     height: 100%;
     border-radius: 50% 0 0 50%;
 }
 .figma-logo .fig4{
-    background-color: #5DADE2;
+    background-color: var(--basic-blue);
     width: 100%;
     height: 100%;
     border-radius: 50% 50% 50% 50%;
 }
 .figma-logo .fig5{
-    background-color: #76D7C4;
+    background-color: var(--soft-cyan);
     width: 100%;
     height: 100%;
     border-radius: 50% 0 50% 50%;
+}
+
+/* Third Draw */
+.third-draw{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--brown-color);
+}
+.third-section_container{
+    width: calc(9 * 10vw);
+    height: calc(6 * 10vw);
+    display: grid;
+    grid-template: repeat(2, 1fr)/ repeat(3, 1fr);
+}
+.draw-section:nth-child(2n + 1){
+    width: auto;
+    height: auto;
+    padding: 16px;
+    display: grid;
+    grid-template: repeat(3, 1fr)/ repeat(3, 1fr);
+}
+.draw-section:nth-child(2n){
+    width: auto;
+    height: auto;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-1 div:nth-child(2n + 1),
+.section-3 div:nth-child(2n + 1),
+.section-5 div:nth-child(2n + 1){
+    width: auto;
+    height: auto;
+    margin: 4px;
+    border-radius: 8%;
+    background-color: var(--soft-yellow);
+}
+.section-2 div,
+.section-4 div,
+.section-6 div{
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+    background-color: var(--soft-yellow);
 }
